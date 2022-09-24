@@ -1,8 +1,14 @@
 import random
+def get.input():
+    return input("Make a choice")
+
+def exit.choice():
+    return input("Do you want to try again:")
+
 while True:
     Choices = ("rock","paper","scissors")
     choice=random.choice(Choices)
-    U_inp = input("Make a choice:")
+    U_inp = get.input()
     U_inp = U_inp.lower()
     if U_inp == Choices[0]:
         if choice == Choices[1]:
@@ -31,7 +37,7 @@ while True:
     elif U_inp == choice:
         print('You draw')
             
-    play_again=input("Do you want try again:")
+    play_again=exit.choice()
     if play_again!="y":
         print("You quit")
         break
